@@ -1,0 +1,12 @@
+.bs1{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+.h1{
+  font-size: 30px ;
+  font-weight: bold; 
+  color: aqua;
+}
+.header{
+  padding: 10px;
+  background-color: azure;
+}
