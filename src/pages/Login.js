@@ -1,62 +1,59 @@
 import React from 'react'
+import car from "../assets/images/car.jpg";
+import {Link} from 'react-router-dom'
 
 import { Form, Input, Button, Col, Row } from 'antd';
 
 export default function Login() {
     return (
         <div className='login'>
+            
             <Row gutter={16}>
-                <Col span={14}></Col>
+                <Col span={14} style={{position:'relative'}} >
+                    <img src={car} alt='' />
+                </Col>
                 <Col span={8} className='text-left'>
-                    <h1>Login</h1>
                     <Form
-                        name="basic"
-                        labelCol={{
-                            span: 8,
-                        }}
-                        wrapperCol={{
-                            span: 16,
-                        }}
-                        initialValues={{
-                            remember: true,
-                        }}
-
-
+                        className='login-form p-5'
+                        layout='vertical'
+                        
                     >
-                        <Form.Item
-                            label="Username"
+                          <h1>Đăng nhập</h1>
+                        <Form.Item 
+                            label='Email'  
                             name="username"
                             rules={[
                                 {
                                     required: true,
-                                    message: 'Please input your username!',
+                                    message: 'Email không được để trống!',
                                 },
                             ]}
                         >
-                            <Input />
-                        </Form.Item>
+                            <Input placeholder='Nhập vào Email' />
+                      
+                             </Form.Item>
+                        
 
                         <Form.Item
-                            label="Password"
+                            label='Mật khẩu'
                             name="password"
                             rules={[
                                 {
                                     required: true,
-                                    message: 'Please input your password!',
+                                    message: 'Mật khẩu không được để trống!',
                                 },
                             ]}
                         >
-                            <Input.Password />
+                            
+                            <Input.Password placeholder='Nhập vào mật khẩu' />
                         </Form.Item>
-                        <Form.Item
-                            wrapperCol={{
-                                offset: 8,
-                                span: 16,
-                            }}
-                        >
-                            <Button type="primary" htmlType="submit">
-                                Submitt
+                        <Form.Item   >
+                            <Button className='btn' type="primary
+                            " htmlType="submit">
+                                Đăng nhập
                             </Button>
+                            <hr></hr>
+                            <Link to='/register'>Chưa có tài khoản? Đăng ký</Link>
                         </Form.Item>
                     </Form>
                 </Col>

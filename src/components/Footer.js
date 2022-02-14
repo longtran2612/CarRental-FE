@@ -18,8 +18,8 @@ function Footer() {
                 <a href="#features">Tính năng</a>
                 <a href="#about">Ứng dụng</a>
                 <a href="#developer">Team phát triển</a>
-                <Link to='/account/registry'>Đăng ký</Link>
-                <Link to='/account/login'>Đăng nhập</Link>
+                <Link to='/registry'>Đăng ký</Link>
+                <Link to='/login'>Đăng nhập</Link>
             </div>
 
         </div>
