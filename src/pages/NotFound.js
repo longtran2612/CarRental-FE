@@ -1,7 +1,7 @@
 
 import React from 'react'
-import img_404 from '../assets/images/404.png';
 import { Result, Button } from 'antd'
+import { Link } from 'react-router-dom';
 const NotFound = () => {
     return (
         <div>
@@ -9,7 +9,11 @@ const NotFound = () => {
                 status="404"
                 title="404"
                 subTitle="Sorry, the page you visited does not exist."
-                extra={<Button type="primary">Back Home</Button>}
+                extra={
+                    <Link to='/'>
+                        <Button type="primary">Back Home</Button>
+                    </Link>
+                }
             />,
         </div>
     )

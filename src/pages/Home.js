@@ -4,10 +4,10 @@ import DefaultLayout from '../components/DefaultLayout/DefaultLayout'
 export default function Home() {
   return (
     <div>
-      <DefaultLayout >
+      <DefaultLayout props='home' >
       
       </DefaultLayout>
-      <h1>home</h1>
+    
      
     </div>
   )

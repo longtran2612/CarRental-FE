@@ -1,22 +1,18 @@
 import React from 'react'
 import './index.css'
-import Footer from '../Footer'
+import Footer from '../footer/Footer'
+import Header from '../header/Header'
 export default function DefaultLayout(props) {
   return (
     <div>
-        <div className='header bs1'>
-            <div className='d-flex justify-content-between'>
-                <h1>LVOTO</h1>
-                <button>user</button>
-
-            </div>
+        <Header></Header>
             <div className='content'>
-                {props.children}
+               <h1> {props.children} </h1>
             </div>
 
             <Footer/>
 
-        </div>
+        
     </div>
   )
 }
