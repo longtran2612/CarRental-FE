@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import {
   InfoOutlined,
   CarOutlined,CarFilled,
@@ -17,13 +17,22 @@ import { Link } from 'react-router-dom';
 
 import logo from '../../assets/images/logo.png';
 import './header.scss';
+import MenuDivider from 'antd/lib/menu/MenuDivider';
 
 const { SubMenu } = Menu;
 
 export default function Header() {
 
+const [keyMenu, setKeyMenu] = useState(1);
+
+const handleOnClick = (e) => {
+    setKeyMenu(e.key);
+};
+
   const headerStyle = {
     display: 'flex',
+     justifyContent: 'center',
+     alignItems: 'center',
     padding: '4px 0',
     boxShadow: " 0 4px 4px -2px #c4c4c4"
 };
@@ -32,11 +41,11 @@ export default function Header() {
     <Menu
         mode="horizontal"
         style={headerStyle}
-        // onClick={handleOnClick}
-        // selectedKeys={keyMenu}
+        onClick={handleOnClick}
+        selectedKeys={keyMenu}
     >
        
-        <Menu.Item key={1} icon={<HomeOutlined />}>
+        <Menu.Item   key={1} icon={<HomeOutlined />}>
             <Link to="/">Trang chủ</Link>
         </Menu.Item>
 
@@ -51,7 +60,12 @@ export default function Header() {
         <Menu.Item key={4} icon={<InfoOutlined />}>
             <Link to="/usermanual">Hướng dẫn</Link>
         </Menu.Item>
+
+        <Menu.Item style={{width:400}}>
+           
+        </Menu.Item>
         
+      
 
 
 
@@ -75,10 +89,10 @@ export default function Header() {
                 </Menu.Item>
             </SubMenu>
         ) : ( */}
-        
+            
+            
             <SubMenu
-            className='loginbutton'
-               style={{justifyContent: 'flex-end'}}
+           
                key="11"
                icon={<LoginOutlined />}
                title="Đăng ký/Đăng nhập"

@@ -4,9 +4,7 @@ import DefaultLayout from '../components/DefaultLayout/DefaultLayout'
 export default function Home() {
   return (
     <div>
-      <DefaultLayout props='home' >
-      
-      </DefaultLayout>
+      <h2>day la home page</h2>
     
      
     </div>
