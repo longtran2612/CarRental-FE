@@ -5,7 +5,9 @@ $demesion-img: 300px;
 $black_text: #363636;
 
 .footer {
-    background-color: rgb(180, 180, 180);
+    background-color: rgb(251, 251, 251);
+    clear: both;
+    position: relative;
   
     &_left {
         padding: 1rem 3rem;

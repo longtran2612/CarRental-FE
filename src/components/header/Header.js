@@ -101,7 +101,7 @@ const handleOnClick = (e) => {
                     <Link to="/login">Đăng nhập</Link>
                 </Menu.Item>
                 <Menu.Item key="11_2">
-                    <Link to="/login">Đăng ký</Link>
+                    <Link to="/register">Đăng ký</Link>
                 </Menu.Item>
             </SubMenu>
            

@@ -57,7 +57,7 @@ function Footer(props) {
                                     <span>Hỗ trợ</span>
 
                                     <li className="footer_right-list">                                   
-                                        <Link to="/usermanual" >Hướng dẫn sủ dụng</Link>
+                                        <Link to="/usermanual" >Hướng dẫn sử dụng</Link>
                                     </li>
                                     <li className="footer_right-list">
                                         <Link to="/">Cộng đồng</Link>

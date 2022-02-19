@@ -1,0 +1,50 @@
+.login{
+    width: auto;
+    min-height: 600px;
+  }
+.login-form{
+  background-color: rgb(233, 233, 233);
+    border-radius: 5px;
+}
+
+.login-form input{
+    background-color:rgb(170, 192, 240) ;
+    
+}
+
+.block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.8rem 5rem;
+
+    font-weight: 500;
+    margin: 1rem 0;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    // & > div {
+    //     flex-grow: 1;
+    // }
+}
+.block-google {
+    background-color: #d64937;
+    color: #ffffff;
+}
+
+.block-facebook {
+    background-color: #3a5794;
+    color: #ffffff;
+}
+
+.icon-login {
+    position: absolute;
+    left: 0.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.btn-login{
+   height: 2rem;
+   width: 6rem;
+  
+}
