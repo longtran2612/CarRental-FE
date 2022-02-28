@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Button } from 'antd'
-import ModalChangePassword from '../../components/ModalChangePassword/ModalChangePassword';
+import ModalChangePassword from 'components/ModalChangePassword/ModalChangePassword';
+import './profile.scss'
+
 
 export default function Profile() {
 
@@ -12,12 +14,15 @@ export default function Profile() {
 
   return (
     <div className='profile'>
+      <div className='container top-profile'>
+    
+      </div>
 
 
       <Button variant="primary" onClick={handleShow}>
        changepassword
       </Button>
-      {showModalChangePassword && <ModalChangePassword visible ={showModalChangePassword} onCancel={!showModalChangePassword}   />}
+      {showModalChangePassword && <ModalChangePassword visible ={showModalChangePassword} onCancel={handleClose}   />}
 
 
     </div>

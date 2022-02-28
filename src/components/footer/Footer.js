@@ -5,7 +5,7 @@ import { Col, Divider, Row, Space } from "antd";
 import { FacebookFilled, InstagramFilled, TwitterSquareFilled, GithubOutlined } from "@ant-design/icons";
 import { Link } from 'react-router-dom';
 
-import logo from '../../assets/images/logo.png';
+import logo from 'assets/images/logo.png';
 
 Footer.propTypes = {};
 

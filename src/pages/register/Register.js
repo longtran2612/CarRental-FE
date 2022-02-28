@@ -1,11 +1,11 @@
 import React from 'react'
 
-import car from "../../assets/images/car.jpg";
+import car from "assets/images/car.jpg";
 import {Link} from 'react-router-dom'
 import { FacebookOutlined, GoogleOutlined } from "@ant-design/icons";
 
 import './register.scss'
-import authLink from "../../constants/authLink";
+import authLink from "constants/authLink";
 
 import { Form, Input, Button, Col, Row } from 'antd';
 

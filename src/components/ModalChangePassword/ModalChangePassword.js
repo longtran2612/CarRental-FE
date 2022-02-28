@@ -2,22 +2,32 @@ import React, {useState} from 'react'
 import { ExclamationCircleOutlined } from '@ant-design/icons';
 import {
     Form,
-    Input, message, Modal
+    Input, Modal
 } from 'antd';
+import PropTypes from 'prop-types';
 
-export default function ModalChangePassword(onCancel,visible) {
+ModalChangePassword.propTypes = {
+    visible: PropTypes.bool.isRequired,
+    onCancel: PropTypes.func,
+};
+
+ModalChangePassword.defaultProps = {
+    onCancel: null,
+    onSaveCodeRevoke: null
+};
+export default function ModalChangePassword({ onCancel, visible }) {
     const [form] = Form.useForm();
-    const [confirmLoading, setConfirmLoading] = useState(false);
     const { confirm } = Modal;
 
     const handleOk = async()=>{
 
     }
-    const handleCancel = (e) => {
+    const handleCancel = () => {
         if (onCancel) {
             onCancel();
         }
     }
+
     const formItemLayout = {
         labelCol: {
             xs: { span: 24 },
@@ -34,7 +44,6 @@ export default function ModalChangePassword(onCancel,visible) {
             visible={visible}
             onOk={handleOk}
             onCancel={handleCancel}
-            confirmLoading={confirmLoading}
             okText='Thay đổi'
             cancelText='Hủy'
 
