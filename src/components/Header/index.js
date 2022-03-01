@@ -16,7 +16,7 @@ import { Menu } from 'antd';
 import { Link } from 'react-router-dom';
 
 import logo from 'assets/images/logo.png';
-import './header.scss';
+import './style.scss';
 import MenuDivider from 'antd/lib/menu/MenuDivider';
 
 const { SubMenu } = Menu;

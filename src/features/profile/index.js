@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Button } from 'antd'
-import ModalChangePassword from 'components/ModalChangePassword/ModalChangePassword';
-import './profile.scss'
+import ModalChangePassword from 'components/ModalChangePassword';
+import './style.scss'
 
 
-export default function Profile() {
+export default function ProfilePage() {
 
   const [showModalChangePassword, setshowModalChangePassword] = useState(false);
 

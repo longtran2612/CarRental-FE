@@ -4,15 +4,14 @@ import car from "assets/images/car.jpg";
 import {Link} from 'react-router-dom'
 import { FacebookOutlined, GoogleOutlined } from "@ant-design/icons";
 
-import './register.scss'
 import authLink from "constants/authLink";
 
 import { Form, Input, Button, Col, Row } from 'antd';
+import './style.scss'
 
-
-export default function Register() {
+export default function RegistryPage() {
   return (
-    <div className='register'>
+    <div className='registry'>
         
         <Row gutter={16}>
             <Col span={14} style={{position:'relative'}} >
@@ -20,7 +19,7 @@ export default function Register() {
             </Col>
             <Col span={8} className='text-left'>
                 <Form
-                    className='register-form p-5'
+                    className='registry-form p-5'
                     layout='vertical'
                     
                 >
@@ -63,7 +62,7 @@ export default function Register() {
                         <Input.Password placeholder='Xác nhận mật khẩu'  />
                     </Form.Item>
                     <Form.Item className='text-center' >
-                        <Button className='btn-register' type="primary
+                        <Button className='btn-registry' type="primary
                         " htmlType="submit">
                             Đăng ký
                         </Button>

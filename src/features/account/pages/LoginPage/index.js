@@ -1,23 +1,57 @@
 import React from 'react'
-import car from "assets/images/car.jpg";
-import meApi from 'api/meApi';
+import { unwrapResult } from '@reduxjs/toolkit';
+import {useState} from 'react'
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom'
+import { Typography } from 'antd';
 import { FacebookOutlined, GoogleOutlined } from "@ant-design/icons";
-import './login.scss'
-import authLink from "constants/authLink";
-
 import { Form, Input, Button, Col, Row } from 'antd';
 
-export default function Login() {
+import authLink from "constants/authLink";
+import meApi from 'api/meApi';
+import car from "assets/images/car.jpg";
+import { setLoading } from 'features/account/accountSlice';
+import { fetchUserProfile, setLogin } from 'app/globalSlice';
+import loginApi from 'api/loginApi';
+import './style.scss'
+
+const { Text, Title } = Typography;
+LoginPage.prototype ={};
+
+export default function LoginPage() {
+    const dispatch = useDispatch();
+    const [error, setError] = useState(false);
+
+
+    const handleSubmit = async (values) =>{
+        const{username, password} = values;
+        try{
+            dispatch(setLoading(true));
+            const { token, refreshToken } = await loginApi.login(
+                username,
+                password
+            );
+            localStorage.setItem('token', token);
+            localStorage.setItem('refreshToken', refreshToken);
+            dispatch(setLogin(true));
+            const { isAdmin } = unwrapResult(
+                await dispatch(fetchUserProfile())
+            );
+
+        }catch(error){
+            setError(true);
+        }
+    }
+
     return (
         <div className='login'>
-
             <Row gutter={16}>
                 <Col span={14} style={{ position: 'relative' }} >
                     <img src={car} alt='' />
                 </Col>
                 <Col span={8} className='text-left'>
                     <Form
+        
                         className='login-form p-5'
                         layout='vertical'
 

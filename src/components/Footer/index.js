@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import './footer.scss';
+import './style.scss';
 import { Col, Divider, Row, Space } from "antd";
 import { FacebookFilled, InstagramFilled, TwitterSquareFilled, GithubOutlined } from "@ant-design/icons";
 import { Link } from 'react-router-dom';
