@@ -2,9 +2,12 @@
     background-color: rgb(233, 233, 233);
   border-radius: 5px;
   }
-  .registty{
+  .registry{
       width: auto;
-      min-height: 600px;
+  
+      background-image: url(../../../../assets/images/car-login.jpg);
+      background-size: cover;
+      background-position: center;
   }
   .btn-registry{
     //   height: 2rem;

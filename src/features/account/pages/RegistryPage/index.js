@@ -1,76 +1,78 @@
 import React from 'react'
 
-import car from "assets/images/car.jpg";
-import {Link} from 'react-router-dom'
+import car from "assets/images/car.png";
+import { Link } from 'react-router-dom'
 import { FacebookOutlined, GoogleOutlined } from "@ant-design/icons";
 
 import authLink from "constants/authLink";
+import { useNavigate } from 'react-router-dom';
 
 import { Form, Input, Button, Col, Row } from 'antd';
 import './style.scss'
 
 export default function RegistryPage() {
-  return (
-    <div className='registry'>
-        
-        <Row gutter={16}>
-            <Col span={14} style={{position:'relative'}} >
-                <img src={car} alt='' />
-            </Col>
-            <Col span={8} className='text-left'>
-                <Form
-                    className='registry-form p-5'
-                    layout='vertical'
-                    
-                >
-                      <h1 className='text-center'>Đăng ký</h1>
-                    <Form.Item
-                       label='Email'  
-                        name="username"
-                        rules={[
-                            {
-                                required: true,
-                                message: 'Email không được để trống!',
-                            },
-                        ]}
-                    >
-                        <Input placeholder='Nhập vào Email' />
-                    </Form.Item>
 
-                    <Form.Item  
-                     label='Mật khẩu'                  
-                        name="password"
-                        rules={[
-                            {
-                                required: true,
-                                message: 'Mật khẩu không được để trống!',
-                            },
-                        ]}
+    const navigate = useNavigate();
+
+    return (
+        <div className='registry'>
+            <Row gutter={16}>
+                <Col xs={24} sm={24} md={14} lg={14} xl={14}>
+                </Col>
+                <Col span={8} className='text-left'>
+                    <Form
+                        className='registry-form p-5'
+                        layout='vertical'
+
                     >
-                        <Input.Password placeholder='Nhập vào mật khẩu' />
-                    </Form.Item>
-                    <Form.Item
-                     label= ' Xác nhận mật khẩu'
-                        name="confirmPassword"
-                        rules={[
-                            {
-                                required: true,
-                                message: 'Mật khẩu không được để trống!',
-                            },
-                        ]}
-                    >
-                        <Input.Password placeholder='Xác nhận mật khẩu'  />
-                    </Form.Item>
-                    <Form.Item className='text-center' >
-                        <Button className='btn-registry' type="primary
+                        <h1 className='text-center'>Đăng ký</h1>
+                        <Form.Item
+                            label='Email'
+                            name="username"
+                            rules={[
+                                {
+                                    required: true,
+                                    message: 'Email không được để trống!',
+                                },
+                            ]}
+                        >
+                            <Input placeholder='Nhập vào Email' />
+                        </Form.Item>
+
+                        <Form.Item
+                            label='Mật khẩu'
+                            name="password"
+                            rules={[
+                                {
+                                    required: true,
+                                    message: 'Mật khẩu không được để trống!',
+                                },
+                            ]}
+                        >
+                            <Input.Password placeholder='Nhập vào mật khẩu' />
+                        </Form.Item>
+                        <Form.Item
+                            label=' Xác nhận mật khẩu'
+                            name="confirmPassword"
+                            rules={[
+                                {
+                                    required: true,
+                                    message: 'Mật khẩu không được để trống!',
+                                },
+                            ]}
+                        >
+                            <Input.Password placeholder='Xác nhận mật khẩu' />
+                        </Form.Item>
+                        <Form.Item className='text-center' >
+                            <Button className='btn-registry' type="primary
                         " htmlType="submit">
-                            Đăng ký
-                        </Button>
-                        <p className='text-center'>Đã có tài khoản? <Link to='/login'>Đăng nhập</Link></p>
-                        <hr></hr>
-                    </Form.Item>
-                    <Form.Item>
-                        <p className='text-center'> Hoặc đăng nhập bằng</p>
+                                Đăng ký
+                            </Button>
+                            <p className='text-center'>Đã có tài khoản? <Link to='/login'>Đăng nhập</Link></p>
+                            <hr></hr>
+                        </Form.Item>
+                        <Form.Item>
+                            <p className='text-center'> Hoặc đăng nhập bằng</p>
                             <div className="logo_sign-up">
                                 <a href={authLink.googleAuth}>
                                     <div className="block-google block">
@@ -94,11 +96,13 @@ export default function RegistryPage() {
                                 </a>
                             </div>
                         </Form.Item>
-                </Form>
-            </Col>
-        </Row>
-      
-    </div>
-);
+                    </Form>
+                </Col>
+                <Col xs={24} sm={24} md={2} lg={2} xl={2}>
+                </Col>
+            </Row>
+
+        </div>
+    );
 };
 

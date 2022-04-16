@@ -2,7 +2,7 @@ import './App.css';
 import {Route , Routes} from 'react-router-dom'
 import Header from 'components/Header';
 import Footer from 'components/Footer';
-import HomePage from 'features/home/Home';
+import HomePage from 'features/home';
 import LoginPage from 'features/account/pages/LoginPage';
 import RegistryPage from 'features/account/pages/RegistryPage';
 import NotFound from 'components/NotFoundPage/NotFound';
@@ -21,7 +21,6 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <br></br>
       <Routes>
         <Route  path='/'   element={<HomePage/>} />
         <Route  path='/login'   element={<LoginPage/>} />
@@ -30,7 +29,6 @@ function App() {
         <Route path='/profile'   element={<ProfilePage/>} />
         <Route path='*'   element={<NotFound/>} />
       </Routes>
-      <br></br>
       <Footer/>
     </div>
   );

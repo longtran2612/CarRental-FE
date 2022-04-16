@@ -9,18 +9,19 @@ import { Form, Input, Button, Col, Row } from 'antd';
 
 import authLink from "constants/authLink";
 import meApi from 'api/meApi';
-import car from "assets/images/car.jpg";
+import car from "assets/images/car.png";
 import { setLoading } from 'features/account/accountSlice';
 import { fetchUserProfile, setLogin } from 'app/globalSlice';
 import loginApi from 'api/loginApi';
 import './style.scss'
-
+import { useNavigate } from 'react-router-dom';
 const { Text, Title } = Typography;
 LoginPage.prototype ={};
 
 export default function LoginPage() {
     const dispatch = useDispatch();
     const [error, setError] = useState(false);
+    const navigate = useNavigate();
 
 
     const handleSubmit = async (values) =>{
@@ -37,6 +38,8 @@ export default function LoginPage() {
             const { isAdmin } = unwrapResult(
                 await dispatch(fetchUserProfile())
             );
+            if (isAdmin) navigate.push('/admin');
+            else navigate.push('/home');
 
         }catch(error){
             setError(true);
@@ -46,10 +49,9 @@ export default function LoginPage() {
     return (
         <div className='login'>
             <Row gutter={16}>
-                <Col span={14} style={{ position: 'relative' }} >
-                    <img src={car} alt='' />
+                <Col xs={24} sm={24} md={14} lg={14} xl={14}>
                 </Col>
-                <Col span={8} className='text-left'>
+                <Col xs={24} sm={24} md={10} lg={10} xl={8} className='text-left'>
                     <Form
         
                         className='login-form p-5'
@@ -121,6 +123,8 @@ export default function LoginPage() {
                             </div>
                         </Form.Item>
                     </Form>
+                </Col>
+                <Col xs={24} sm={24} md={0} lg={0} xl={2}>
                 </Col>
             </Row>
         

@@ -20,23 +20,3 @@ html {
   scroll-behavior: smooth;
 }
 
-@media (max-width: 1200px) {
-  html {
-    font-size: 75%;
-  }
-}
-
-@media (max-width: 450px) {
-  html {
-    font-size: 80%;
-  }
-}
-
-div[style*="overflow"] {
-  scroll-behavior: smooth;
-}
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
