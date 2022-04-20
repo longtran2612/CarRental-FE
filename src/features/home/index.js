@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Input, DatePicker, Col, Row, Image, Typography } from 'antd'
+import { Button, Input, DatePicker, Col, Row, Image, Typography, Card } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { SearchOutlined } from '@ant-design/icons';
 
@@ -21,8 +21,8 @@ export default function HomePage() {
       <div className='home-page'>
         <div className="slogan">
           <h1 className='slogan-text' >LVOTO - THUÊ XE ĐƠN GIẢN - AN TOÀN </h1>
-        </div>  
-        <div  className='search-car'>
+        </div>
+        <div className='search-car'>
           <div className='tab-left'>
             <div >
               <div className='service-box'>
@@ -48,13 +48,176 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <div className='tutorial'>
+      <div className='list-selfdrive'>
+        <div className='list-selfdrive-box'>
+          <Row className='title-list-car' span={24}>
+            <Title style={{ fontWeight: '1000', fontSize: '3rem', color: '#6c6c6e' }} >XE TỰ LÁI</Title>
+          </Row>
+          <Row span={24}>
+            <Col xs={24} sm={24} md={12} lg={6} xl={6}>
+              <Card style={{ width: 300 }}
+                cover={
+                  <img
+                    alt="example"
+                    src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                  />}
+              >
+                <Title>Toyota </Title>
+                <p>
+                  <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                  Phan Văn Trị, HCM
+                </p>
+                <p>
+                  2000000 Đ/Ngày
+                </p>
+              </Card>
+            </Col>
+            <Col xs={24} sm={24} md={12} lg={6} xl={6}>
+              <Card style={{ width: 300 }}
+                cover={
+                  <img
+                    alt="example"
+                    src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                  />}
+              >
+                <Title>Toyota </Title>
+                <p>
+                  <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                  Phan Văn Trị, HCM
+                </p>
+                <p>
+                  2000000 Đ/Ngày
+                </p>
+              </Card>
+            </Col>
+            <Col xs={24} sm={24} md={12} lg={6} xl={6}>
+              <Card style={{ width: 300 }}
+                cover={
+                  <img
+                    alt="example"
+                    src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                  />}
+              >
+                <Title>Toyota </Title>
+                <p>
+                  <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                  Phan Văn Trị, HCM
+                </p>
+                <p>
+                  2000000 Đ/Ngày
+                </p>
+              </Card>
+            </Col>
+            <Col xs={24} sm={24} md={12} lg={6} xl={6}>
+              <Card style={{ width: 300 }}
+                cover={
+                  <img
+                    alt="example"
+                    src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                  />}
+              >
+                <Title>Toyota </Title>
+                <p>
+                  <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                  Phan Văn Trị, HCM
+                </p>
+                <p>
+                  2000000 Đ/Ngày
+                </p>
+              </Card>
+            </Col>
+          </Row>
+        </div>
+      </div>
+      <div className='list-withdriver'>
+      <div className='list-withdriver-box'>
+        <Row className='title-list-car' span={24}>
+          <Title style={{ fontWeight: '1000', fontSize: '3rem', color: '#6c6c6e' }} >XE CÓ TÀI XẾ</Title>
+        </Row>
         <Row span={24}>
-          <Title className='title-tutorial-choose'>Quy trình thuê xe</Title>
+            <Col xs={24} sm={24} md={12} lg={6} xl={6}>
+              <Card style={{ width: 300 }}
+                cover={
+                  <img
+                    alt="example"
+                    src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                  />}
+              >
+                <Title>Toyota </Title>
+                <p>
+                  <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                  Phan Văn Trị, HCM
+                </p>
+                <p>
+                  2000000 Đ/Ngày
+                </p>
+              </Card>
+            </Col>
+            <Col xs={24} sm={24} md={12} lg={6} xl={6}>
+              <Card style={{ width: 300 }}
+                cover={
+                  <img
+                    alt="example"
+                    src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                  />}
+              >
+                <Title>Toyota </Title>
+                <p>
+                  <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                  Phan Văn Trị, HCM
+                </p>
+                <p>
+                  2000000 Đ/Ngày
+                </p>
+              </Card>
+            </Col>
+            <Col xs={24} sm={24} md={12} lg={6} xl={6}>
+              <Card style={{ width: 300 }}
+                cover={
+                  <img
+                    alt="example"
+                    src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                  />}
+              >
+                <Title>Toyota </Title>
+                <p>
+                  <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                  Phan Văn Trị, HCM
+                </p>
+                <p>
+                  2000000 Đ/Ngày
+                </p>
+              </Card>
+            </Col>
+            <Col xs={24} sm={24} md={12} lg={6} xl={6}>
+              <Card style={{ width: 300 }}
+                cover={
+                  <img
+                    alt="example"
+                    src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                  />}
+              >
+                <Title>Toyota </Title>
+                <p>
+                  <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                  Phan Văn Trị, HCM
+                </p>
+                <p>
+                  2000000 Đ/Ngày
+                </p>
+              </Card>
+            </Col>
+          </Row>
+          </div>
+
+      </div>
+      <div className='tutorial'>
+        <Row className='title-tutorial-choose' span={24}>
+          <Title style={{ fontWeight: '1000', fontSize: '3rem', color: '#6c6c6e' }} >QUY TRÌNH THUÊ XE</Title>
         </Row>
         <Row span={24} className='tutorial-item'>
           <Col xs={12} sm={12} md={12} lg={6} xl={6} className='tutorial-box'>
-            <Row span={24} >
+            <Row className="images-tutorial-choose" span={24} >
               <Image src={tutorial1} alt='' preview={false} />
             </Row>
             <Row className="title-tutorial-choose" span={24}>
@@ -62,15 +225,15 @@ export default function HomePage() {
             </Row>
           </Col>
           <Col xs={12} sm={12} md={12} lg={6} xl={6} className='tutorial-box'>
-            <Row span={24}>
+            <Row className="images-tutorial-choose" span={24}>
               <Image src={tutorial2} alt='' preview={false} />
             </Row>
-            <Row span={24}>
+            <Row className='title-tutorial-choose' span={24}>
               Nhận xe hoặc giao xe tận nơi
             </Row>
           </Col>
           <Col xs={12} sm={12} md={12} lg={6} xl={6} className='tutorial-box'>
-            <Row span={24}>
+            <Row className="images-tutorial-choose" span={24}>
               <Image src={tutorial3} alt='' preview={false} />
             </Row>
             <Row className='title-tutorial-choose' span={24}>
@@ -78,10 +241,10 @@ export default function HomePage() {
             </Row>
           </Col>
           <Col xs={12} sm={12} md={12} lg={6} xl={6} className='tutorial-box'>
-            <Row span={24}>
+            <Row className="images-tutorial-choose" span={24}>
               <Image src={tutorial4} alt='' preview={false} />
             </Row>
-            <Row span={24}>
+            <Row className='title-tutorial-choose' span={24}>
               Kết thúc chuyến đi
             </Row>
           </Col>

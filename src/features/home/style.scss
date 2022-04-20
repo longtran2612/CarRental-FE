@@ -1,7 +1,7 @@
 .home {}
 
 .home-page {
-    background-image: url(../../assets/images/home-background.png);
+    background-image: url(../../assets/images/car-login.jpg);
     display: flex;
     align-items: center;
     background-size: cover;
@@ -26,17 +26,16 @@
 }
 
 .slogan {
-    margin-top: 16rem !important;
+    margin-top: 13rem !important;
     text-align: center;
     width: 100%;
-    background-color: rgb(247, 234, 234);
     width: fit-content;
     margin: 5px auto;
     border-radius: 5px;
 
     .slogan-text {
-        color: rgb(55, 152, 242);
-        font-size: 3rem;
+        color: rgb(36, 137, 232);
+        font-size: 4rem;
     }
 }
 
@@ -69,11 +68,10 @@
     position: relative;
     .tutorial-item {
         margin-bottom: 0;
-        align-items: center;
-        display: flex;
-        margin: 20px;
+
         .tutorial-box {
-            align-items: center;
+           
+            display: block;
         }
     }
 }
@@ -81,10 +79,38 @@
 .title-tutorial-choose {
     text-align: center;
     align-items: center;
-
-
+    display: block;
+    color: #6c6c6e;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 24px;
+    margin-bottom: 0.5rem;
+}
+.images-tutorial-choose{
+    display: block;
+    justify-self: center;
+    
 }
 .title-tutorial {
     font-weight: 700;
     text-align: center;
+}
+.title-list-car{
+    display: block;
+    color: #6c6c6e;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 24px;
+    margin-bottom: 0.5rem;
+
+}
+.list-selfdrive-box {
+    padding: 1rem 0;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.list-withdriver-box{
+    padding: 1rem 0;
+    margin-left: 5%;
+    margin-right: 5%;
 }
